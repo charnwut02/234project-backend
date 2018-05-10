@@ -4,10 +4,12 @@ Your member names, and students id:
   - 592115009 Charnwut Thopurin.
     592115024 Phumsiri Jirapornsawad.
 Your correspondence email addresses
-  - Phumsiri_J@cmu.ac.th.
+:  - Phumsiri_J@cmu.ac.th.
 Your url to your webpage
-  - http://34.208.44.70:8087/
+:  - http://34.208.44.70:8087/
 Your ip:port for your backend
-  - 34.208.44.70:8086
+:  - 34.208.44.70:8086
 Your Katalon test repository link
-  - 
+:  - 
+
+** Note that because of our instance can't connect with docker for some reasoms. So we decided to borrow it from our friends gruop which is 592115091 Sirisak Wongwal to continue a works. **
