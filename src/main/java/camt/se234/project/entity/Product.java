@@ -25,4 +25,38 @@ public class Product {
     String imageLocation;
     double price;
 
+    public Product(String name) {
+        this.name = name;
+    }
+
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getImageLocation() {
+        return imageLocation;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+
 }
