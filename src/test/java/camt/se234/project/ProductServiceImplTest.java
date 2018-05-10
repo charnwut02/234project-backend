@@ -28,36 +28,36 @@ public class ProductServiceImplTest {
     @Test
     public void getAllProductsTest() {
         List<Product> mockProducts = new ArrayList<>();
-        mockProducts.add(new Product("chicken"));
-        mockProducts.add(new Product("pork"));
-        mockProducts.add(new Product("beef"));
+        mockProducts.add(new Product("greentea"));
+        mockProducts.add(new Product("tea"));
+        mockProducts.add(new Product("smoothie"));
         when(productDao.getProducts()).thenReturn(mockProducts);
-        assertThat(productService.getAllProducts(), hasItem(new Product("pork")));
-        assertThat(productService.getAllProducts(), hasItems(new Product("chicken"),
-                new Product("pork")));
+        assertThat(productService.getAllProducts(), hasItem(new Product("tea")));
+        assertThat(productService.getAllProducts(), hasItems(new Product("greentea"),
+                new Product("tea")));
     }
 
     @Test
     public void getAvailableProductsTest() {
         List<Product> mockProducts = new ArrayList<>();
-        mockProducts.add(new Product("pork", 80));
-        mockProducts.add(new Product("beef", 100));
-        mockProducts.add(new Product("fish", 30));
-        mockProducts.add(new Product("rice", 24));
+        mockProducts.add(new Product("tea", 20));
+        mockProducts.add(new Product("coffee", 15));
+        mockProducts.add(new Product("juice", 25));
+        mockProducts.add(new Product("ice", 8));
         when(productDao.getProducts()).thenReturn(mockProducts);
-        assertThat(productService.getAvailableProducts(), hasItem(new Product("pork", 80)));
-        assertThat(productService.getAvailableProducts(), is(not(new Product("rice", 24))));
+        assertThat(productService.getAvailableProducts(), hasItem(new Product("tea", 20)));
+        assertThat(productService.getAvailableProducts(), is(not(new Product("ice", -8))));
     }
 
     @Test
     public void getUnavailableProductSizeTest() {
         List<Product> mockProducts = new ArrayList<>();
-        mockProducts.add(new Product("pork", 80));
-        mockProducts.add(new Product("beef", 100));
-        mockProducts.add(new Product("fish", 30));
-        mockProducts.add(new Product("tea", 16));
-        mockProducts.add(new Product("rice", 24));
+        mockProducts.add(new Product("tea", 20));
+        mockProducts.add(new Product("coffee", 15));
+        mockProducts.add(new Product("juice", 25));
+        mockProducts.add(new Product("fanta", 18));
+        mockProducts.add(new Product("ice", 8));
         when(productDao.getProducts()).thenReturn(mockProducts);
-        assertThat(productService.getUnavailableProductSize(), is(1));
+        assertThat(productService.getUnavailableProductSize(), is(0));
     }
 }
