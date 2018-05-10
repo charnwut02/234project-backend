@@ -7,7 +7,7 @@ before_install:
 - sudo mv docker-compose /usr/local/bin
 - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 install:
-- mvn install -D maven.javadoc.skip=true -B -V
+- mvn install -Dmaven.javadoc.skip=true -B -V
 - ls -l
 - docker build --build-arg JAR_FILE=/target/project.jar -t charnwut02/234project-backend .
 - docker push charnwut02/234project-backend
