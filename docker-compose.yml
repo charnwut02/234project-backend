@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+ frontend:
+   image: dto80/project234-frontend
+   ports:
+     - "8087:80"
+   volumes :
+    - type: bind
+      source: ./settings
+      target: /usr/share/nginx/html/assets
+ backend:
+    image: charnwut02/234project-backend
+    ports:
+    - "8086:8080"
