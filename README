@@ -1,15 +1,20 @@
 You group name:
   - Insomnia.
+
 Your member names, and students id:
   - 592115009 Charnwut Thopurin.
     592115024 Phumsiri Jirapornsawad.
+
 Your correspondence email addresses
 :  - Phumsiri_J@cmu.ac.th.
+
 Your url to your webpage
 :  - http://34.208.44.70:8087/
+
 Your ip:port for your backend
 :  - 34.208.44.70:8086
+
 Your Katalon test repository link
 :  - 
 
-** Note that because of our instance can't connect with docker for some reasons. So we decided to borrow it from our friend's group which is 592115091 Sirisak Wongwal to continue works. **
+** Note that because of our instance can't connect with docker because docker daemon is not running. So we decided to borrow it from our friend's group which is 592115031 Sirisak Wongwal to continue works. **
