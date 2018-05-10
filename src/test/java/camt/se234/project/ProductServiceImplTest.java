@@ -52,8 +52,8 @@ public class ProductServiceImplTest {
     @Test
     public void getUnavailableProductSizeTest() {
         List<Product> mockProducts = new ArrayList<>();
-        mockProducts.add(new Product("pork", 20));
-        mockProducts.add(new Product("beef", 15));
+        mockProducts.add(new Product("pork", 80));
+        mockProducts.add(new Product("beef", 100));
         mockProducts.add(new Product("fish", 30));
         mockProducts.add(new Product("tea", 16));
         mockProducts.add(new Product("rice", 24));

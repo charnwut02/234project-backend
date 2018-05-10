@@ -44,10 +44,10 @@ public class SaleOrderServiceImplTest {
     public void getAverageSaleOrderPriceTest(){
         List<SaleTransaction> transactions = new ArrayList<>();
         List<SaleOrder> orders = new ArrayList<>();
-        transactions.add(new SaleTransaction(new Product("pork" , 20) , 10));
-        transactions.add(new SaleTransaction(new Product("beef" , 15) , 3));
+        transactions.add(new SaleTransaction(new Product("pork" , 80) , 3));
+        transactions.add(new SaleTransaction(new Product("beef" , 100) , 3));
         when(orderDao.getOrders()).thenReturn(orders);
         orders.add(new SaleOrder(transactions));
-        assertThat(saleOrderService.getAverageSaleOrderPrice(),is(245.0));
+        assertThat(saleOrderService.getAverageSaleOrderPrice(),is(540.0));
     }
 }
