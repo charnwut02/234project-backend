@@ -24,12 +24,31 @@ public class SaleOrder {
     @Builder.Default
     @OneToMany(mappedBy = "order", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     List<SaleTransaction> transactions = new ArrayList<>();
+
+    public SaleOrder(String saleOrderId){
+        this.saleOrderId = saleOrderId;
+    }
+
+    public SaleOrder(List<SaleTransaction> saleTransaction){
+        this.transactions = saleTransaction;
+    }
+
     public double getTotalPrice(){
         double totalPrice = 0;
-        for (SaleTransaction transaction :
-                transactions) {
+        for (SaleTransaction transaction : transactions) {
             totalPrice += transaction.getAmount() * transaction.getProduct().getPrice();
         }
         return totalPrice;
     }
-}
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getSaleOrderId() {
+        return saleOrderId;
+    }
+
+    public List<SaleTransaction> getTransactions() {
+        return transactions;
+    }
